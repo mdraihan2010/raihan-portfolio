@@ -144,30 +144,35 @@ export const cpFocusAreas = [
 
 export const journey = [
   {
-    title: 'C / C++',
+    title: 'C / C++ Foundation',
     description:
-      'Started with the fundamentals of programming: syntax, control flow, functions, memory, and writing structured code in C and C++.',
-  },
-  {
-    title: 'Competitive Programming',
-    description:
-      'Began solving algorithmic problems regularly to strengthen logical thinking, speed, and familiarity with data structures and algorithms.',
-  },
-  {
-    title: 'HTML & CSS',
-    description:
-      'Explored the building blocks of the web, learning how to structure content semantically and style responsive layouts.',
+      'Built a strong programming foundation by learning programming fundamentals, control flow, functions, problem solving, and structured coding with C and C++.',
   },
   {
     title: 'Python',
     description:
-      'Picked up Python for its readability and versatility, using it for scripting, practice problems, and experimenting with new ideas.',
+      'Completed Python Basics and Intermediate Python, covering core programming concepts, functions, data structures, file handling, exception handling, and more.',
   },
   {
     title: 'Web Development',
     description:
-      'Currently learning to combine HTML, CSS, and JavaScript to build interactive, well-structured web applications.',
+      'Learned HTML and CSS and started building frontend projects. Currently progressing with JavaScript to build more interactive web applications.',
     current: true,
+  },
+  {
+    title: 'Competitive Programming',
+    description:
+      'Practicing problem solving with C++ while developing skills in data structures, algorithms, time and space complexity, and contest problem solving.',
+  },
+  {
+    title: 'Academic Growth',
+    description:
+      'Developing knowledge through university coursework including Operating Systems, Database Management Systems, Software Engineering, Artificial Intelligence, and Numerical Analysis.',
+  },
+  {
+    title: 'Future Goals',
+    description:
+      'Planning to progress toward advanced data structures and algorithms, full-stack web development, software engineering, research, and higher studies abroad.',
   },
 ]
 

@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 export function Resume() {
   return (
-    <Section id="resume" index="08" eyebrow="Resume" title="My resume, in one place.">
+    <Section id="resume" index="09" eyebrow="Resume" title="My resume, in one place.">
       <Reveal>
         <div className="flex flex-col items-start gap-6 rounded-xl border border-border bg-card p-6 md:flex-row md:items-center md:justify-between md:p-10">
           <div className="flex items-start gap-5">

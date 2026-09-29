@@ -8,6 +8,7 @@ import { Projects } from '@/components/sections/projects'
 import { CompetitiveProgramming } from '@/components/sections/competitive-programming'
 import { Journey } from '@/components/sections/journey'
 import { Achievements } from '@/components/sections/achievements'
+import { Certifications } from '@/components/sections/certifications'
 import { Resume } from '@/components/sections/resume'
 import { Contact } from '@/components/sections/contact'
 
@@ -24,6 +25,7 @@ export default function Page() {
         <CompetitiveProgramming />
         <Journey />
         <Achievements />
+        <Certifications />
         <Resume />
         <Contact />
       </main>

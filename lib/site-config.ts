@@ -36,6 +36,7 @@ export const navItems = [
   { id: 'competitive-programming', label: 'CP' },
   { id: 'journey', label: 'Journey' },
   { id: 'achievements', label: 'Achievements' },
+  { id: 'certifications', label: 'Certifications' },
   { id: 'resume', label: 'Resume' },
   { id: 'contact', label: 'Contact' },
 ] as const
@@ -178,7 +179,53 @@ export const journey = [
 
 // PLACEHOLDER: replace with real achievements when available.
 export const achievements = [
-  { title: 'Achievement Title', description: 'Add a short description, the event or platform, and the date.' },
-  { title: 'Achievement Title', description: 'Add a short description, the event or platform, and the date.' },
-  { title: 'Achievement Title', description: 'Add a short description, the event or platform, and the date.' },
+  {
+    title: 'CodeChef — 500 Difficulty Problems Completed',
+    description:
+      'Successfully completed all the practice problems of 500 difficulty rating by CodeChef, strengthening problem-solving and competitive programming skills.',
+    date: '17 Jan 2025',
+  },
+  {
+    title: 'Inter-Department Programming Contest — Participant',
+    description:
+      'Participated in the Inter-Department Programming Contest organized by the Department of Computer Science and Engineering, Jashore University of Science and Technology (JUST).',
+    date: '26 May 2025',
+  },
+  {
+    title: 'Research, Publication & Higher Studies Workshop',
+    description:
+      'Successfully completed the five-day “From Idea to Impact: A Premier Workshop on Research, Publication, and Higher Studies” organized by JUST Research Society in collaboration with Research & Integrated Thoughts (RIT) and the Office of the Students Counselling & Guidance, JUST.',
+    date: 'May 2026',
+  },
+]
+
+export const certifications = [
+  {
+    title: 'C Programming',
+    issuer: '10 Minute School',
+    description:
+      'Successfully completed the সহজ ভাষায় C PROGRAMMING online course.',
+    date: '26 Jun 2025',
+  },
+  {
+    title: 'Basic Quran Tajweed',
+    issuer: 'Tahzib Institute',
+    description:
+      'Successfully completed the Basic Quran Tajweed course.',
+    date: '15 Feb 2026',
+  },
+  {
+    title: 'MS Word 2007 for Beginners',
+    issuer: 'Mind Luster',
+    description:
+      'Successfully completed the MS Word 2007 for Beginners course.',
+    date: '23 Feb 2026',
+  },
+  {
+    title: 'Excel Essentials for Workplace Productivity',
+    issuer: 'Passport to Earning Bangladesh',
+    description:
+      'Successfully completed the Excel Essentials for Workplace Productivity certification.',
+    date: '05 Apr 2026',
+  },
 ]

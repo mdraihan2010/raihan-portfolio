@@ -28,7 +28,7 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      index="09"
+      index="10"
       eyebrow="Contact"
       title="Let's connect."
       description="I'm always happy to talk about programming, learning opportunities, or collaboration. Feel free to reach out through any of the channels below."

@@ -41,13 +41,26 @@ export const navItems = [
 ] as const
 
 export const skillGroups = [
-  { title: 'Programming', items: ['C', 'C++', 'Python'] },
-  { title: 'Web Development', items: ['HTML', 'CSS', 'JavaScript'] },
   {
-    title: 'Computer Science',
-    items: ['Data Structures', 'Algorithms', 'Competitive Programming'],
+    title: 'Programming Languages',
+    items: ['C', 'C++', 'Python'],
   },
-  { title: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Linux'] },
+  {
+    title: 'Web Development',
+    items: ['HTML', 'CSS'],
+  },
+  {
+    title: 'Competitive Programming',
+    items: ['C++', 'Problem Solving', 'Data Structures & Algorithms'],
+  },
+  {
+    title: 'Tools & Technologies',
+    items: ['Git', 'GitHub', 'VS Code'],
+  },
+  {
+    title: 'Currently Learning',
+    items: ['JavaScript', 'Advanced Data Structures & Algorithms'],
+  },
 ]
 
 export type Project = {

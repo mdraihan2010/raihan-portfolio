@@ -75,28 +75,28 @@ export type Project = {
 // PLACEHOLDER: replace these with your real projects.
 export const projects: Project[] = [
   {
-    name: 'Project Title One',
+    name: 'Personal Portfolio Website',
     description:
-      'A short, one or two sentence summary of what this project does, the problem it solves, and what you learned while building it.',
+      'A personal portfolio website showcasing my education, skills, projects, competitive programming journey, and learning progress as a CSE student.',
+    technologies: ['HTML', 'CSS', 'Next.js', 'Tailwind CSS', 'GitHub', 'Vercel'],
+    githubUrl: '#',
+    liveUrl: '#',
+    placeholder: true,
+  },
+  {
+    name: 'Web Development Projects',
+    description:
+      'A collection of frontend projects built while learning and practicing web development, focusing on responsive layouts, styling, and user interface design.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     githubUrl: '#',
     liveUrl: '#',
     placeholder: true,
   },
   {
-    name: 'Project Title Two',
+    name: 'Competitive Programming Solutions',
     description:
-      'Describe the goal of the project and highlight one interesting technical decision, such as a data structure or algorithm you used.',
-    technologies: ['C++', 'Data Structures'],
-    githubUrl: '#',
-    liveUrl: '#',
-    placeholder: true,
-  },
-  {
-    name: 'Project Title Three',
-    description:
-      'Summarize the features, your role, and the outcome. Keep it concise and focused on what makes the project worth a closer look.',
-    technologies: ['Python', 'Git'],
+      'A collection of competitive programming problems and solutions focused on problem solving, algorithms, data structures, and improving coding skills.',
+    technologies: ['C++', 'Data Structures', 'Algorithms'],
     githubUrl: '#',
     liveUrl: '#',
     placeholder: true,

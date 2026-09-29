@@ -17,14 +17,12 @@ export const siteConfig = {
   // PLACEHOLDER: drop your resume at /public/resume.pdf (same name) or change this path.
   resumeUrl: '/resume.pdf',
 
-  links: {
-    // PLACEHOLDER: replace with your real email address.
-    email: 'your.email@example.com',
-    // PLACEHOLDER: replace with your real GitHub profile URL.
-    github: 'https://github.com/your-username',
-    // PLACEHOLDER: replace with your real LinkedIn profile URL.
-    linkedin: 'https://www.linkedin.com/in/your-profile',
-  },
+links: {
+  email: 'mdraihan20104@gmail.com',
+  phone: '+8801522131107',
+  github: 'https://github.com/mdraihan2010',
+  linkedin: 'https://www.linkedin.com/in/md-raihan-428101346/',
+},
 }
 
 export const navItems = [
@@ -206,6 +204,7 @@ export const certifications = [
     description:
       'Successfully completed the সহজ ভাষায় C PROGRAMMING online course.',
     date: '26 Jun 2025',
+    certificateUrl: '/certificates/c-programming.pdf',
   },
   {
     title: 'Basic Quran Tajweed',
@@ -213,6 +212,7 @@ export const certifications = [
     description:
       'Successfully completed the Basic Quran Tajweed course.',
     date: '15 Feb 2026',
+    certificateUrl: '/certificates/quran-tajweed.pdf',
   },
   {
     title: 'MS Word 2007 for Beginners',
@@ -220,6 +220,7 @@ export const certifications = [
     description:
       'Successfully completed the MS Word 2007 for Beginners course.',
     date: '23 Feb 2026',
+    certificateUrl: '/certificates/ms-word-2007-for-beginners.pdf',
   },
   {
     title: 'Excel Essentials for Workplace Productivity',
@@ -227,5 +228,6 @@ export const certifications = [
     description:
       'Successfully completed the Excel Essentials for Workplace Productivity certification.',
     date: '05 Apr 2026',
+    certificateUrl: '/certificates/excel.pdf',
   },
 ]

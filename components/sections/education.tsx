@@ -1,4 +1,5 @@
-import { BookOpen, Braces, GraduationCap, MapPin, type LucideIcon } from 'lucide-react'
+import Image from 'next/image'
+import { BookOpen, Braces, MapPin, type LucideIcon } from 'lucide-react'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { siteConfig } from '@/lib/site-config'
@@ -29,9 +30,15 @@ export function Education() {
             <article className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
               <header className="flex flex-col gap-5 border-b border-border p-6 sm:flex-row sm:items-start sm:justify-between md:p-8">
                 <div className="flex items-start gap-4 md:gap-5">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary md:size-14">
-                    <GraduationCap className="size-6 md:size-7" aria-hidden="true" />
-                  </div>
+<div className="flex size-16 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-white md:size-20">
+  <Image
+    src="/just-logo.png"
+    alt="Jashore University of Science and Technology logo"
+    width={96}
+    height={96}
+    className="size-14 object-contain md:size-18"
+  />
+</div>
                   <div className="min-w-0">
                     <p className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">University</p>
                     <h3 className="mt-1.5 text-balance text-xl font-semibold leading-snug tracking-tight md:text-2xl">

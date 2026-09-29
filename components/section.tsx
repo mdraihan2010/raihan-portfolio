@@ -15,7 +15,7 @@ type SectionProps = {
 export function Section({ id, index, eyebrow, title, description, children, className }: SectionProps) {
   const headingId = `${id}-heading`
   return (
-    <section id={id} aria-labelledby={headingId} className={cn('border-t border-border/60 py-20 md:py-28', className)}>
+    <section id={id} aria-labelledby={headingId} className={cn('border-t border-border/60 py-16 md:py-20', className)}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <Reveal>
           <header className="mb-12 max-w-2xl md:mb-16">

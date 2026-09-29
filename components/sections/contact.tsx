@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, MapPin } from 'lucide-react'
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
 import type { ComponentType, SVGProps } from 'react'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
@@ -13,15 +13,21 @@ type ContactItem = {
 }
 
 const items: ContactItem[] = [
-  { label: 'Email', value: siteConfig.links.email, href: `mailto:${siteConfig.links.email}`, icon: Mail },
-  { label: 'GitHub', value: siteConfig.links.github.replace('https://', ''), href: siteConfig.links.github, icon: GitHubIcon },
   {
-    label: 'LinkedIn',
-    value: siteConfig.links.linkedin.replace('https://www.', ''),
-    href: siteConfig.links.linkedin,
-    icon: LinkedInIcon,
+  label: 'Email',
+  value: siteConfig.links.email,
+  href: `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.links.email}`,
+  icon: Mail,
+},
+  { label: 'Phone', value: siteConfig.links.phone, href: `tel:${siteConfig.links.phone}`, icon: Phone },
+  { label: 'GitHub', value: siteConfig.links.github.replace('https://', ''), href: siteConfig.links.github, icon: GitHubIcon },
+  { 
+    label: 'LinkedIn', 
+    value: siteConfig.links.linkedin.replace('https://www.', ''), 
+    href: siteConfig.links.linkedin, 
+    icon: LinkedInIcon, 
   },
-  { label: 'Location', value: siteConfig.location, icon: MapPin },
+  { label: 'Location', value: siteConfig.location, icon: MapPin }, 
 ]
 
 export function Contact() {

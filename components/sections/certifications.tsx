@@ -1,4 +1,4 @@
-import { BadgeCheck } from 'lucide-react'
+import { ArrowUpRight, BadgeCheck } from 'lucide-react'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { certifications } from '@/lib/site-config'
@@ -32,9 +32,18 @@ export function Certifications() {
                 {item.issuer}
               </p>
 
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {item.description}
-              </p>
+             <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+             {item.description}
+             </p>
+       <a
+        href={item.certificateUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-5 inline-flex w-fit items-center gap-2 rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary transition-colors hover:border-primary hover:bg-primary/10"
+        >
+           View Certificate
+           <ArrowUpRight className="size-4" aria-hidden="true" />
+          </a>
             </article>
           </Reveal>
         ))}

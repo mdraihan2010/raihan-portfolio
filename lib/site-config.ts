@@ -105,28 +105,40 @@ export const projects: Project[] = [
 
 // PLACEHOLDER: add your profile URLs. Leave url empty to show "Profile link coming soon".
 export const cpProfiles = [
-  { name: 'Codeforces', url: '' },
-  { name: 'CodeChef', url: '' },
-  { name: 'AtCoder', url: '' },
-  { name: 'LeetCode', url: '' },
+  { name: 'Codeforces', url: 'https://codeforces.com/profile/Raihan20' },
+  { name: 'CodeChef', url: 'https://www.codechef.com/users/raihan20' },
+  { name: 'AtCoder', url: 'https://atcoder.jp/users/Raihan20' },
+  { name: 'LeetCode', url: 'https://leetcode.com/u/Raihan20/' },
+  { name: 'HackerRank', url: 'https://www.hackerrank.com/profile/12mdraihan34' },
+  { name: 'VJudge', url: 'https://vjudge.net/user/Raihan20' },
+  { name: 'LightOJ', url: 'https://lightoj.com/user/user-qypngbus' },
 ]
 
 export const cpFocusAreas = [
   {
-    title: 'C++ for Contests',
-    description: 'Using C++ and the STL to write fast, concise solutions under time constraints.',
+    title: 'Problem Solving',
+    description:
+      'Breaking problems into smaller parts, analyzing constraints, handling edge cases, and improving through regular practice.',
   },
   {
     title: 'Data Structures',
-    description: 'Learning when and how to apply arrays, stacks, queues, trees, and graphs effectively.',
+    description:
+      'Learning and practicing data structures to organize, store, and process data efficiently.',
   },
   {
     title: 'Algorithms',
-    description: 'Studying techniques such as sorting, searching, greedy methods, and dynamic programming.',
+    description:
+      'Studying and applying algorithms for searching, sorting, greedy techniques, dynamic programming, and other problem-solving patterns.',
   },
   {
-    title: 'Problem Solving',
-    description: 'Breaking problems into smaller parts, reasoning about edge cases, and improving through practice.',
+    title: 'Time & Space Complexity',
+    description:
+      'Understanding time and space complexity to analyze solutions and choose efficient approaches.',
+  },
+  {
+    title: 'Contest Practice',
+    description:
+      'Practicing programming contests to improve speed, accuracy, implementation skills, and problem-solving under time constraints.',
   },
 ]
 

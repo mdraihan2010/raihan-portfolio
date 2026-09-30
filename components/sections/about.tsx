@@ -35,8 +35,8 @@ export function About() {
       title="A CSE student who enjoys solving problems."
     >
       <div className="grid gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
-        {/* About Me + Current Focus */}
-        <div className="space-y-10">
+        {/* About Me */}
+        <div>
           <Reveal className="space-y-5 text-pretty text-lg leading-relaxed text-muted-foreground">
             <p>
               I&apos;m{' '}
@@ -61,31 +61,10 @@ export function About() {
               computer science.
             </p>
           </Reveal>
-
-          <Reveal delay={80}>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-              Currently Developing
-            </h3>
-
-            <ul className="flex flex-wrap gap-2">
-              {currentFocus.map((item) => (
-                <li
-                  key={item}
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-secondary/60 px-3 py-1.5 font-mono text-xs text-secondary-foreground"
-                >
-                  <span
-                    className="size-1.5 rounded-full bg-primary"
-                    aria-hidden="true"
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
         </div>
 
-        {/* Interests */}
-        <div>
+        {/* Interests + Currently Developing */}
+        <div className="space-y-8">
           <Reveal delay={100}>
             <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
               Interests
@@ -102,6 +81,27 @@ export function About() {
                     aria-hidden="true"
                   />
                   <span className="text-sm font-medium">{label}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+
+          <Reveal delay={160}>
+            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              Currently Developing
+            </h3>
+
+            <ul className="flex flex-wrap gap-2">
+              {currentFocus.map((item) => (
+                <li
+                  key={item}
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-secondary/60 px-3 py-1.5 font-mono text-xs text-secondary-foreground"
+                >
+                  <span
+                    className="size-1.5 rounded-full bg-primary"
+                    aria-hidden="true"
+                  />
+                  {item}
                 </li>
               ))}
             </ul>

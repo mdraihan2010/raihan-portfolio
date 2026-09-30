@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ExternalLink, FolderGit2 } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 import { GitHubIcon } from '@/components/brand-icons'
@@ -15,12 +16,24 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
 
-      {/* Project Preview */}
-      <div className="-mx-6 -mt-6 mb-6 flex aspect-video items-center justify-center rounded-t-xl border-b border-border bg-secondary/30">
-        <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          Project Preview
-        </span>
-      </div>
+{/* Project Preview */}
+<div className="-mx-6 -mt-6 mb-6 aspect-video overflow-hidden rounded-t-xl border-b border-border bg-secondary/30">
+  {project.name === 'Personal Portfolio Website' ? (
+    <Image
+      src="/projects/portfolio-preview.png"
+      alt="Personal Portfolio Website preview"
+      width={1280}
+      height={720}
+      className="h-full w-full object-cover"
+    />
+  ) : (
+    <div className="flex h-full items-center justify-center">
+      <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+        Project Preview
+      </span>
+    </div>
+  )}
+</div>
 
       {/* Project Icon & Placeholder */}
       <div className="mb-5 flex items-start justify-between gap-3">

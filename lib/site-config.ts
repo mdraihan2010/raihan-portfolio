@@ -74,14 +74,13 @@ export type Project = {
 // PLACEHOLDER: replace these with your real projects.
 export const projects: Project[] = [
   {
-    name: 'Personal Portfolio Website',
-    description:
-      'A personal portfolio website showcasing my education, skills, projects, competitive programming journey, and learning progress as a CSE student.',
-    technologies: ['HTML', 'CSS', 'Next.js', 'Tailwind CSS', 'GitHub', 'Vercel'],
-    githubUrl: '#',
-    liveUrl: '#',
-    placeholder: true,
-  },
+  name: 'Personal Portfolio Website',
+  description:
+    'A personal portfolio website showcasing my education, skills, projects, competitive programming journey, achievements, certifications, and learning progress as a CSE student.',
+  technologies: ['Next.js', 'React', 'Tailwind CSS', 'GitHub', 'Vercel'],
+  githubUrl: 'https://github.com/mdraihan2010/raihan-portfolio',
+  liveUrl: 'https://raihan-portfolio-jade.vercel.app',
+},
   {
     name: 'Web Development Projects',
     description:

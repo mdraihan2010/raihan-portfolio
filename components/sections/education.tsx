@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { BookOpen, Braces, MapPin, type LucideIcon } from 'lucide-react'
+import { BookOpen, Braces, GraduationCap, type LucideIcon } from 'lucide-react'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { siteConfig } from '@/lib/site-config'
@@ -7,7 +7,7 @@ import { siteConfig } from '@/lib/site-config'
 const details: { icon: LucideIcon; label: string; value: string }[] = [
   { icon: Braces, label: 'Department', value: siteConfig.department },
   { icon: BookOpen, label: 'Academic Status', value: siteConfig.academicStatus },
-  { icon: MapPin, label: 'Country', value: siteConfig.location },
+  { icon: GraduationCap, label: 'Program', value: 'B.Sc. in Engineering' },
 ]
 
 export function Education() {

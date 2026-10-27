@@ -53,11 +53,15 @@ export const navItems: {
 export const skillGroups = [
   {
     title: 'Programming Languages',
-    items: ['C', 'C++', 'Python'],
+    items: ['C', 'C++', 'Python', 'JavaScript'],
   },
   {
-    title: 'Web Development',
-    items: ['HTML', 'CSS'],
+    title: 'Frontend Development',
+    items: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend & Database',
+    items: ['Node.js', 'MongoDB'],
   },
   {
     title: 'Competitive Programming',
@@ -65,11 +69,11 @@ export const skillGroups = [
   },
   {
     title: 'Tools & Technologies',
-    items: ['Git', 'GitHub', 'VS Code'],
+    items: ['Git', 'GitHub', 'VS Code', 'Vercel'],
   },
   {
     title: 'Currently Learning',
-    items: ['JavaScript', 'Advanced Data Structures & Algorithms'],
+    items: ['Advanced Data Structures & Algorithms'],
   },
 ]
 
@@ -79,6 +83,7 @@ export type Project = {
   technologies: string[]
   githubUrl: string
   liveUrl: string
+  image?: string // preview chobi: /public/projects/ folder e rakho
   placeholder?: boolean
 }
 
@@ -91,15 +96,16 @@ export const projects: Project[] = [
   technologies: ['Next.js', 'React', 'Tailwind CSS', 'GitHub', 'Vercel'],
   githubUrl: 'https://github.com/mdraihan2010/raihan-portfolio',
   liveUrl: 'https://raihan-portfolio-jade.vercel.app',
+  image: '/projects/portfolio-preview.png',
 },
   {
-    name: 'Web Development Projects',
+    name: 'QuizMaster — Online Quiz System',
     description:
-      'A collection of frontend projects built while learning and practicing web development, focusing on responsive layouts, styling, and user interface design.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    githubUrl: '#',
-    liveUrl: '#',
-    placeholder: true,
+      'A full-stack quiz platform for Class 9–10 students. Learners practice MCQ, short and creative questions by class, subject and chapter, take timed board-style exams, and track their progress on a leaderboard. Includes user login, profiles, an admin panel and a dark/light theme.',
+    technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'JavaScript', 'HTML', 'CSS'],
+    githubUrl: 'https://github.com/mdraihan2010/online-quiz-system',
+    liveUrl: 'https://online-quiz-system-roan-zeta.vercel.app/',
+    image: '/projects/quizmaster-preview.png',
   },
   {
     name: 'Competitive Programming Solutions',
@@ -165,7 +171,7 @@ export const journey = [
   {
     title: 'Web Development',
     description:
-      'Learned HTML and CSS and started building frontend projects. Currently progressing with JavaScript to build more interactive web applications.',
+      'Started with HTML and CSS, then moved on to JavaScript, React and Next.js. Built full-stack projects like QuizMaster, an online quiz system, using Node.js and MongoDB.',
     current: true,
   },
   {

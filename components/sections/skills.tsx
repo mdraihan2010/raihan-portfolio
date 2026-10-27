@@ -1,9 +1,10 @@
-import { Braces, Cpu, Layout, Wrench } from 'lucide-react'
+import { BookOpen, Braces, Cpu, Database, Layout, Wrench } from 'lucide-react'
 import { Section, Tag } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { skillGroups } from '@/lib/site-config'
 
-const icons = [Braces, Layout, Cpu, Wrench]
+// skillGroups er order onujayi icon: Languages, Frontend, Backend, CP, Tools, Learning
+const icons = [Braces, Layout, Database, Cpu, Wrench, BookOpen]
 
 export function Skills() {
   return (

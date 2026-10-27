@@ -53,7 +53,7 @@ export const navItems: {
 export const skillGroups = [
   {
     title: 'Programming Languages',
-    items: ['C', 'C++', 'Python', 'JavaScript'],
+    items: ['C', 'C++', 'Python', 'JavaScript', 'TypeScript'],
   },
   {
     title: 'Frontend Development',
@@ -61,7 +61,7 @@ export const skillGroups = [
   },
   {
     title: 'Backend & Database',
-    items: ['Node.js', 'MongoDB'],
+    items: ['Node.js', 'Express', 'MongoDB'],
   },
   {
     title: 'Competitive Programming',
@@ -108,13 +108,13 @@ export const projects: Project[] = [
     image: '/projects/quizmaster-preview.png',
   },
   {
-    name: 'Competitive Programming Solutions',
+    name: 'StockPilot — Inventory Management System',
     description:
-      'A collection of competitive programming problems and solutions focused on problem solving, algorithms, data structures, and improving coding skills.',
-    technologies: ['C++', 'Data Structures', 'Algorithms'],
-    githubUrl: '#',
-    liveUrl: '#',
-    placeholder: true,
+      'A full-stack inventory, sales and purchase management system. Handles products, stock with low-stock alerts, sales and purchases, partial payments and customer dues, returns, and sales/profit reports. Includes role-based access (Admin, Manager, Staff), JWT login, an audit log and a dark/light theme.',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
+    githubUrl: 'https://github.com/mdraihan2010/inventory-management-system',
+    liveUrl: 'https://inventory-management-system-rouge-nu.vercel.app/',
+    image: '/projects/stockpilot-preview.jpg',
   },
 ]
 
@@ -171,7 +171,7 @@ export const journey = [
   {
     title: 'Web Development',
     description:
-      'Started with HTML and CSS, then moved on to JavaScript, React and Next.js. Built full-stack projects like QuizMaster, an online quiz system, using Node.js and MongoDB.',
+      'Started with HTML and CSS, then moved on to JavaScript, React and Next.js. Built full-stack projects like QuizMaster (an online quiz system) and StockPilot (an inventory management system) using Node.js and MongoDB.',
     current: true,
   },
   {

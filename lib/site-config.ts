@@ -14,6 +14,9 @@ export const siteConfig = {
   department: 'Computer Science and Engineering (CSE)',
   academicStatus: '3rd Year, 1st Semester',
 
+  // Live site URL (SEO, social share image, sitemap er jonno lage)
+  siteUrl: 'https://raihan-portfolio-jade.vercel.app',
+
   // PLACEHOLDER: drop your resume at /public/resume.pdf (same name) or change this path.
   resumeUrl: '/resume.pdf',
 
@@ -25,19 +28,27 @@ links: {
 },
 }
 
-export const navItems = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'education', label: 'Education' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'competitive-programming', label: 'CP' },
-  { id: 'journey', label: 'Journey' },
-  { id: 'achievements', label: 'Achievements' },
-  { id: 'certifications', label: 'Certifications' },
-  { id: 'resume', label: 'Resume' },
-  { id: 'contact', label: 'Contact' },
-] as const
+// primary: true  -> desktop navbar e dekhabe (6-7 tar beshi rakhbo na)
+// primary: false -> shudhu mobile menu te dekhabe
+// partOf: ei section e thakle kon navbar link highlight hobe
+export const navItems: {
+  id: string
+  label: string
+  primary: boolean
+  partOf?: string
+}[] = [
+  { id: 'home', label: 'Home', primary: false },
+  { id: 'about', label: 'About', primary: true },
+  { id: 'education', label: 'Education', primary: true },
+  { id: 'skills', label: 'Skills', primary: true },
+  { id: 'projects', label: 'Projects', primary: true },
+  { id: 'competitive-programming', label: 'CP', primary: true },
+  { id: 'journey', label: 'Journey', primary: false, partOf: 'competitive-programming' },
+  { id: 'achievements', label: 'Achievements', primary: true },
+  { id: 'certifications', label: 'Certifications', primary: false, partOf: 'achievements' },
+  { id: 'resume', label: 'Resume', primary: false, partOf: 'contact' },
+  { id: 'contact', label: 'Contact', primary: true },
+]
 
 export const skillGroups = [
   {

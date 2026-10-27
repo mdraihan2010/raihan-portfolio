@@ -8,6 +8,25 @@ import {
 } from 'lucide-react'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
+import { CountUp } from '@/components/count-up'
+import {
+  achievements,
+  certifications,
+  cpProfiles,
+  skillGroups,
+} from '@/lib/site-config'
+
+// Number gulo hard-code na kore config theke gune nicchi:
+// notun certificate add korle number ta nijei bere jabe.
+const stats = [
+  {
+    value: skillGroups[0].items.length,
+    label: 'Programming Languages',
+  },
+  { value: cpProfiles.length, label: 'Coding Platforms' },
+  { value: certifications.length, label: 'Certificates' },
+  { value: achievements.length, label: 'Achievements' },
+]
 
 type Item = { icon: LucideIcon; label: string }
 
@@ -60,6 +79,29 @@ export function About() {
               and build a career in software engineering, research, and
               computer science.
             </p>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <dl className="mt-10 grid grid-cols-2 overflow-hidden rounded-xl border border-border bg-card sm:grid-cols-4">
+              {stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className={
+                    'flex flex-col gap-1 p-5 ' +
+                    (i % 2 === 1 ? 'border-l border-border ' : '') +
+                    (i >= 2 ? 'border-t border-border sm:border-t-0 ' : '') +
+                    (i === 2 ? 'sm:border-l' : '')
+                  }
+                >
+                  <dt className="font-mono text-[11px] uppercase leading-snug tracking-wider text-muted-foreground">
+                    {stat.label}
+                  </dt>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-primary">
+                    <CountUp to={stat.value} />
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </Reveal>
         </div>
 

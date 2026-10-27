@@ -4,6 +4,10 @@ import { GitHubIcon, LinkedInIcon } from '@/components/brand-icons'
 import { siteConfig } from '@/lib/site-config'
 import { cn } from '@/lib/utils'
 import { ProfilePhoto } from '@/components/profile-photo'
+import { TypingText } from '@/components/typing-text'
+
+// "CSE Student | Competitive Programmer | ..." -> ['CSE Student', 'Competitive Programmer', ...]
+const roles = siteConfig.role.split(' | ')
 
 const bigButton = 'h-11 px-5 text-sm'
 const socialButton = cn(
@@ -38,22 +42,14 @@ export function Hero() {
             {siteConfig.name}
           </h1>
 
+          {/* Screen reader pura role ta ekbare porbe; animation ta shudhu chokher jonno */}
+          <p className="sr-only">{siteConfig.role}</p>
           <p
-            aria-label={siteConfig.role}
-            className="mt-4 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 font-mono text-sm leading-relaxed text-primary sm:text-base lg:justify-start"
+            aria-hidden="true"
+            className="mt-4 flex min-h-[1.75rem] items-center justify-center gap-2 font-mono text-base text-primary sm:text-lg lg:justify-start"
           >
-            {siteConfig.role.split(' | ').map((part, index) => (
-              <span
-                key={part}
-                className="inline-flex items-center gap-2.5 whitespace-nowrap"
-                aria-hidden="true"
-              >
-                {index > 0 && (
-                  <span className="text-primary/40">{'/'}</span>
-                )}
-                {part}
-              </span>
-            ))}
+            <span className="text-primary/50">{'>'}</span>
+            <TypingText words={roles} />
           </p>
 
           <p className="mt-5 flex items-center gap-2 text-balance text-sm text-foreground/80">

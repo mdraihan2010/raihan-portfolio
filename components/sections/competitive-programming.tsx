@@ -1,6 +1,7 @@
 import { ArrowUpRight, Terminal } from 'lucide-react'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
+import { CodeWindow } from '@/components/code-window'
 import { cpFocusAreas, cpProfiles } from '@/lib/site-config'
 
 export function CompetitiveProgramming() {
@@ -25,6 +26,7 @@ export function CompetitiveProgramming() {
           ))}
         </div>
 
+        <div className="flex flex-col gap-6">
         <Reveal delay={120}>
           <div className="rounded-xl border border-border bg-card p-6">
             <div className="mb-5 flex items-center gap-3">
@@ -55,6 +57,11 @@ export function CompetitiveProgramming() {
             </ul>
           </div>
         </Reveal>
+
+        <Reveal delay={180}>
+          <CodeWindow />
+        </Reveal>
+        </div>
       </div>
     </Section>
   )

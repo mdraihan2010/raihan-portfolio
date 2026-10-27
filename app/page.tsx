@@ -1,5 +1,6 @@
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { BackToTop } from '@/components/back-to-top'
 import { Hero } from '@/components/sections/hero'
 import { About } from '@/components/sections/about'
 import { Education } from '@/components/sections/education'
@@ -30,6 +31,7 @@ export default function Page() {
         <Contact />
       </main>
       <SiteFooter />
+      <BackToTop />
     </>
   )
 }

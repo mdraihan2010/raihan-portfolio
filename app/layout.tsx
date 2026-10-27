@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { themeInitScript } from '@/lib/theme-script'
+import { siteConfig } from '@/lib/site-config'
 import './globals.css'
 
 const geistSans = Geist({
@@ -20,6 +21,9 @@ const description =
   'Portfolio of MD Raihan, a Computer Science and Engineering student at Jashore University of Science and Technology (JUST), Bangladesh, interested in competitive programming, software engineering, and web development.'
 
 export const metadata: Metadata = {
+  // Base URL: share image / canonical link er pura URL banate lage
+  metadataBase: new URL(siteConfig.siteUrl),
+  alternates: { canonical: '/' },
   title: { default: title, template: '%s | MD Raihan' },
   description,
   applicationName: 'MD Raihan Portfolio',
@@ -41,11 +45,12 @@ export const metadata: Metadata = {
     type: 'website',
     title,
     description,
+    url: '/',
     siteName: 'MD Raihan',
     locale: 'en_US',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title,
     description,
   },
@@ -53,7 +58,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  generator: 'v0.app',
   icons: {
     icon: [
       {

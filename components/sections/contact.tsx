@@ -4,6 +4,7 @@ import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { GitHubIcon, LinkedInIcon } from '@/components/brand-icons'
 import { siteConfig } from '@/lib/site-config'
+import { CopyButton } from '@/components/copy-button'
 
 type ContactItem = {
   label: string
@@ -12,13 +13,10 @@ type ContactItem = {
   icon: ComponentType<SVGProps<SVGSVGElement>>
 }
 
+const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.links.email}`
+
+// Email ta upore alada boro card e ache, tai ekhane shudhu baki gulo
 const items: ContactItem[] = [
-  {
-  label: 'Email',
-  value: siteConfig.links.email,
-  href: `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.links.email}`,
-  icon: Mail,
-},
   { label: 'Phone', value: siteConfig.links.phone, href: `tel:${siteConfig.links.phone}`, icon: Phone },
   { label: 'GitHub', value: siteConfig.links.github.replace('https://', ''), href: siteConfig.links.github, icon: GitHubIcon },
   { 
@@ -39,7 +37,35 @@ export function Contact() {
       title="Let's connect."
       description="I'm always happy to talk about programming, learning opportunities, or collaboration. Feel free to reach out through any of the channels below."
     >
-      <ul className="grid gap-4 sm:grid-cols-2">
+      <Reveal>
+        <div className="mb-4 flex flex-col gap-5 rounded-xl border border-primary/30 bg-primary/5 p-6 md:flex-row md:items-center md:justify-between md:p-8">
+          <div className="flex min-w-0 items-center gap-4">
+            <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+              <Mail className="size-5" aria-hidden="true" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                Best way to reach me
+              </p>
+              <p className="mt-1 break-all text-lg font-semibold md:text-xl">{siteConfig.links.email}</p>
+            </div>
+          </div>
+          <div className="flex shrink-0 flex-wrap gap-2">
+            <CopyButton value={siteConfig.links.email} label="Copy email" />
+            <a
+              href={gmailUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-10 items-center gap-2 rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Send email
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </Reveal>
+
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {items.map(({ label, value, href, icon: Icon }, i) => {
           const content = (
             <>

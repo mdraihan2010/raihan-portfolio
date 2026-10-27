@@ -107,6 +107,23 @@
   mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, black 30%, transparent 75%);
 }
 
+/* Typing cursor blink */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Certificate modal: native <dialog> er pichoner kalo porda */
+dialog.cert-dialog::backdrop {
+  background: oklch(0 0 0 / 0.6);
+  backdrop-filter: blur(4px);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);

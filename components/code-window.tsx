@@ -29,7 +29,7 @@ export function CodeWindow() {
   return (
     <figure
       aria-label="Decorative C++ code snippet"
-      className="relative mx-auto w-full max-w-md rounded-xl border border-border bg-card/80 shadow-2xl shadow-black/10 backdrop-blur-sm dark:shadow-black/40"
+      className="relative mx-auto w-full max-w-none rounded-xl border border-border bg-card/80 shadow-2xl shadow-black/10 backdrop-blur-sm dark:shadow-black/40"
     >
       <div className="flex items-center gap-2 border-b border-border px-4 py-3" aria-hidden="true">
         <span className="size-2.5 rounded-full bg-muted-foreground/30" />

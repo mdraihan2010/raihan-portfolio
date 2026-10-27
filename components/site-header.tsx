@@ -1,10 +1,13 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { FileText, Menu, X } from 'lucide-react'
 import { navItems, siteConfig } from '@/lib/site-config'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { ScrollProgress } from '@/components/scroll-progress'
 import { cn } from '@/lib/utils'
+
+const primaryItems = navItems.filter((item) => item.primary)
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
@@ -16,13 +19,17 @@ export function SiteHeader() {
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
 
+    // Shob section observe kori. Je section screen er majhkhane ase,
+    // shetar navbar link (ba tar "partOf" link) highlight hoy.
     const sections = navItems
       .map((item) => document.getElementById(item.id))
       .filter((el): el is HTMLElement => el !== null)
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) setActive(entry.target.id)
+          if (!entry.isIntersecting) continue
+          const item = navItems.find((n) => n.id === entry.target.id)
+          setActive(item?.partOf ?? entry.target.id)
         }
       },
       { rootMargin: '-45% 0px -50% 0px' },
@@ -65,19 +72,27 @@ export function SiteHeader() {
           <span>{siteConfig.name.toLowerCase().replace(' ', '.')}</span>
         </a>
 
-        <nav aria-label="Primary" className="hidden xl:block">
+        <nav aria-label="Primary" className="hidden lg:block">
           <ul className="flex items-center gap-0.5">
-            {navItems.map((item) => (
+            {primaryItems.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
                   aria-current={active === item.id ? 'true' : undefined}
                   className={cn(
-                    'rounded-md px-2.5 py-1.5 text-sm transition-colors hover:text-foreground',
+                    'relative rounded-md px-3 py-1.5 text-sm transition-colors hover:text-foreground',
                     active === item.id ? 'text-foreground' : 'text-muted-foreground',
                   )}
                 >
                   {item.label}
+                  {/* Active link er niche chhoto ekta line */}
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'absolute inset-x-3 -bottom-0.5 h-px origin-left bg-primary transition-transform duration-300',
+                      active === item.id ? 'scale-x-100' : 'scale-x-0',
+                    )}
+                  />
                 </a>
               </li>
             ))}
@@ -85,6 +100,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={siteConfig.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden h-9 items-center gap-2 rounded-lg border border-primary/40 px-3 text-sm font-medium text-primary transition-colors hover:bg-primary/10 sm:inline-flex"
+          >
+            <FileText className="size-4" aria-hidden="true" />
+            Resume
+          </a>
           <ThemeToggle />
           <button
             type="button"
@@ -92,7 +116,7 @@ export function SiteHeader() {
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="inline-flex size-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:hidden"
+            className="inline-flex size-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
           >
             {open ? <X className="size-4" aria-hidden="true" /> : <Menu className="size-4" aria-hidden="true" />}
           </button>
@@ -103,7 +127,7 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="animate-in fade-in slide-in-from-top-2 border-t border-border bg-background/95 backdrop-blur-md duration-200 xl:hidden"
+          className="animate-in fade-in slide-in-from-top-2 border-t border-border bg-background/95 backdrop-blur-md duration-200 lg:hidden"
         >
           <ul className="mx-auto grid max-w-6xl grid-cols-2 gap-1 px-5 py-4 sm:grid-cols-3 md:px-8">
             {navItems.map((item) => (
@@ -124,6 +148,8 @@ export function SiteHeader() {
           </ul>
         </nav>
       )}
+
+      <ScrollProgress />
     </header>
   )
 }

@@ -17,8 +17,9 @@ export const siteConfig = {
   // Live site URL (SEO, social share image, sitemap er jonno lage)
   siteUrl: 'https://raihan-portfolio-jade.vercel.app',
 
-  // PLACEHOLDER: drop your resume at /public/resume.pdf (same name) or change this path.
-  resumeUrl: '/resume.pdf',
+  // CV file: /public/Md_Raihan_CV.pdf
+  // Download korle ei nam-ei file ta save hobe
+  resumeUrl: '/Md_Raihan_CV.pdf',
 
 links: {
   email: 'mdraihan20104@gmail.com',

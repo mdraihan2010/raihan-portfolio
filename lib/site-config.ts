@@ -25,7 +25,7 @@ links: {
   email: 'mdraihan20104@gmail.com',
   phone: '+8801522131107',
   github: 'https://github.com/mdraihan2010',
-  linkedin: 'https://www.linkedin.com/in/md-raihan-428101346/',
+  linkedin: 'https://www.linkedin.com/in/mdraihan2010/',
 },
 }
 

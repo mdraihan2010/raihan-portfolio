@@ -159,7 +159,7 @@ The site is deployed on **Vercel**. Every push to the `main` branch builds and d
 ## Contact
 
 - **Email:** [mdraihan20104@gmail.com](mailto:mdraihan20104@gmail.com)
-- **LinkedIn:** [md-raihan-428101346](https://www.linkedin.com/in/md-raihan-428101346/)
+- **LinkedIn:** [mdraihan2010](https://www.linkedin.com/in/mdraihan2010/)
 - **GitHub:** [@mdraihan2010](https://github.com/mdraihan2010)
 - **Codeforces:** [Raihan20](https://codeforces.com/profile/Raihan20)
 
